@@ -31,15 +31,15 @@ import { MarkdownTheme } from './theme';
 
 const TEMPLATE_PATH = path.join(__dirname, 'resources', 'templates');
 
-export const indexTemplate = Handlebars.compile(
+export const render_utils = const indexTemplate = Handlebars.compile(
   fs.readFileSync(path.join(TEMPLATE_PATH, 'index.hbs')).toString(),
 );
 
-export const reflectionTemplate = Handlebars.compile(
+export const render_utils = const reflectionTemplate = Handlebars.compile(
   fs.readFileSync(path.join(TEMPLATE_PATH, 'reflection.hbs')).toString(),
 );
 
-export const reflectionMemberTemplate = Handlebars.compile(
+export const render_utils = const reflectionMemberTemplate = Handlebars.compile(
   fs.readFileSync(path.join(TEMPLATE_PATH, 'reflection.member.hbs')).toString(),
 );
 

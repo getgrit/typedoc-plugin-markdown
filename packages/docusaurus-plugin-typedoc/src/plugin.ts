@@ -10,7 +10,7 @@ import { PluginOptions } from './types';
 // store list of plugin ids when running multiple instances
 const apps: string[] = [];
 
-export default function pluginDocusaurus(
+export function pluginDocusaurus(
   context: LoadContext,
   opts: Partial<PluginOptions>,
 ) {

@@ -20,7 +20,7 @@ export function functionWithParameters(
  *
  * @param someParam  This is some numeric parameter.
  */
-export const variableFunction = (someParam: number) => {
+export const signatures = const variableFunction = (someParam: number) => {
   return 0;
 };
 
@@ -69,7 +69,7 @@ export function functionWithRest(...rest: string[]): string {
  *
  * @param value  The name value.
  */
-export function multipleSignatures(value: string): string;
+export const signatures = function multipleSignatures(value: string): string;
 
 /**
  * This is the second signature of a function with multiple signatures.
@@ -77,7 +77,7 @@ export function multipleSignatures(value: string): string;
  * @param value       An object containing the name value.
  * @param value.name  A value of the object.
  */
-export function multipleSignatures(value: { name: string }): string;
+export const signatures = function multipleSignatures(value: { name: string }): string;
 
 /**
  * This is the actual implementation, this comment will not be visible
@@ -95,7 +95,7 @@ export function functionWithUnionTypes(
   return null;
 }
 
-export interface CallableSignature {
+export const signatures = interface CallableSignature {
   (): string;
 }
 
@@ -110,7 +110,7 @@ export function privateFunction() {
   return '';
 }
 
-export const functionWithTypeParams = <Item = boolean | string>() => true;
+export const signatures = const functionWithTypeParams = <Item = boolean | string>() => true;
 
 /**
  * Comments for function
@@ -144,7 +144,7 @@ export function commentsInReturn() {
  * @param cases - Tuple of case and the result if `value` and `case` is equal
  * @returns Function for which to provide the default value
  */
-export const swtch =
+export const signatures = const swtch =
   <T, R>(value: T, ...cases: [T, R][]) =>
   (def: R) => {
     for (const c of cases) {
@@ -154,7 +154,7 @@ export const swtch =
     return def;
   };
 
-export type _someCallback_ = (name: string, value: unknown) => void;
+export const signatures = type _someCallback_ = (name: string, value: unknown) => void;
 
 /**
  * FOO
@@ -213,18 +213,18 @@ export class ClassWithConstructor {
   constructor(x: string, y: string) {}
 }
 
-export type User = {
+export const signatures = type User = {
   id: string;
   data: string;
-};
+}
 
-export const promiseReturningASymbol = (): Promise<User> => {
+export const signatures = const promiseReturningASymbol = (): Promise<User> => {
   return new Promise((resolve) => {
     resolve({ id: 'id', data: 'data' });
   });
 };
 
-export const promiseReturningAnObject = (): Promise<{
+export const signatures = const promiseReturningAnObject = (): Promise<{
   id: string;
   data: string;
 }> => {

@@ -1,8 +1,7 @@
 import * as Handlebars from 'handlebars';
 import { DeclarationReflection, ReferenceReflection } from 'typedoc';
 
-export default function () {
-  Handlebars.registerHelper(
+export function if_is_reference() { Handlebars.registerHelper(
     'ifIsReference',
     function (
       this: DeclarationReflection | ReferenceReflection,
@@ -12,5 +11,4 @@ export default function () {
         ? options.fn(this)
         : options.inverse(this);
     },
-  );
-}
+  ); }

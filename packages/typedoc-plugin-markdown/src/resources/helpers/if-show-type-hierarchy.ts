@@ -2,8 +2,7 @@ import * as Handlebars from 'handlebars';
 import { DeclarationHierarchy, DeclarationReflection } from 'typedoc';
 import { PageEvent } from 'typedoc';
 
-export default function () {
-  Handlebars.registerHelper(
+export function if_show_type_hierarchy() { Handlebars.registerHelper(
     'ifShowTypeHierarchy',
     function (
       this: PageEvent<DeclarationReflection>,
@@ -14,5 +13,4 @@ export default function () {
         ? options.fn(this)
         : options.inverse(this);
     },
-  );
-}
+  ); }

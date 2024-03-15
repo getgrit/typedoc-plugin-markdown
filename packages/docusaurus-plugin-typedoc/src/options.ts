@@ -26,7 +26,7 @@ const DEFAULT_PLUGIN_OPTIONS: PluginOptions = {
   frontmatter: undefined,
 };
 
-export const getPluginOptions = (
+export const options = const getPluginOptions = (
   opts: Partial<PluginOptions>,
 ): PluginOptions => {
   const options = {

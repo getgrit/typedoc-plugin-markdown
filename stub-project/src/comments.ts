@@ -5,7 +5,7 @@
  *
  * Taken from [JsDoc](http://usejsdoc.org/tags-inline-link.html).
  */
-export const commentWithDocLinks = true;
+export const comments = const commentWithDocLinks = true;
 
 /**
  * Additionally you can link to other classes, members or functions using double square brackets.
@@ -15,7 +15,7 @@ export const commentWithDocLinks = true;
  * - Link to an undefined reflection: [[VOID]]
  */
 
-export const commentsWithSymbolLinks = true;
+export const comments = const commentsWithSymbolLinks = true;
 
 /**
  * <p>
@@ -25,7 +25,7 @@ export const commentsWithSymbolLinks = true;
  * <li>List item</li>
  * </ul>
  */
-export const commentsWithHTML = true;
+export const comments = const commentsWithHTML = true;
 
 /**
  * This is an example of include
@@ -36,7 +36,7 @@ export const commentsWithHTML = true;
  *
  * [[include:class-example.hbs]]
  */
-export const commentsWithIncludes = true;
+export const comments = const commentsWithIncludes = true;
 
 /**
  * @description
@@ -54,7 +54,7 @@ export const commentsWithIncludes = true;
  * const appVersion = await getVersion();
  * ```
  */
-export const commentsWithTags = true;
+export const comments = const commentsWithTags = true;
 
 /**
  * Some comments with fence blocks
@@ -67,7 +67,7 @@ export const commentsWithTags = true;
  * anotherFunction()
  * ```
  */
-export const commentsWithFencedBlock = true;
+export const comments = const commentsWithFencedBlock = true;
 
 /**
  * Comments with a return definition
@@ -102,7 +102,7 @@ export class CommentClass {
 /**
  * Some comments
  */
-export type literalWithBlockComments = {
+export const comments = type literalWithBlockComments = {
   /**
    * Comment for prop
    */

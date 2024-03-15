@@ -2,8 +2,7 @@ import * as Handlebars from 'handlebars';
 import { Comment } from 'typedoc';
 import { camelToTitleCase } from '../../utils';
 
-export default function () {
-  Handlebars.registerHelper(
+export function comments() { Handlebars.registerHelper(
     'comments',
     function (comment: Comment, showSummary = true, showTags = true) {
       const md: string[] = [];
@@ -28,5 +27,4 @@ export default function () {
 
       return md.join('\n\n');
     },
-  );
-}
+  ); }

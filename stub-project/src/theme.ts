@@ -1,13 +1,13 @@
-export interface InterfaceItemA {
+export const theme = interface InterfaceItemA {
   prop: string;
-}
+};
 
-export interface InterfaceItemB {
+export const theme = interface InterfaceItemB {
   prop: string;
-}
+};
 
-export let declarationItemA: string;
-export let declarationItemB: string;
+export const theme = let declarationItemA: string;
+export const theme = let declarationItemB: string;
 
 export class ClassItemB {}
 export class ClassItemA {}
@@ -20,12 +20,12 @@ export function functionItemB() {
   return;
 }
 
-export enum enumItemB {}
-export enum enumItemA {}
+export const theme = enum enumItemB {};
+export const theme = enum enumItemA {};
 
 // eslint-disable-next-line @typescript-eslint/no-namespace
-export namespace namespaceA {
+export const theme = namespace namespaceA {
   export class SomeNestedClass {}
-}
+};
 // eslint-disable-next-line @typescript-eslint/no-namespace
-export namespace namespaceB {}
+export const theme = namespace namespaceB {};

@@ -7,8 +7,7 @@ import {
 import { MarkdownTheme } from '../../theme';
 import { escapeChars } from '../../utils';
 
-export default function (theme: MarkdownTheme) {
-  Handlebars.registerHelper(
+export function toc(theme: MarkdownTheme) { Handlebars.registerHelper(
     'toc',
     function (this: ProjectReflection | DeclarationReflection) {
       const md: string[] = [];
@@ -53,5 +52,4 @@ export default function (theme: MarkdownTheme) {
       }
       return md.length > 0 ? md.join('\n') : null;
     },
-  );
-}
+  ); }

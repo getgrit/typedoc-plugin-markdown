@@ -3,19 +3,19 @@
  */
 export class ReflectionClass {}
 
-export interface CallableReflection {
+export const reflections = interface CallableReflection {
   (): string;
 }
 
-export interface IndexableReflection {
+export const reflections = interface IndexableReflection {
   [index: number]: string;
 }
 
-export enum EnumReflection {
+export const reflections = enum EnumReflection {
   Up = 'UP',
   Down = 'DOWN',
   Left = 'LEFT',
   Right = 'RIGHT',
-}
+};
 
 export class ImplementedClass implements ReflectionClass {}

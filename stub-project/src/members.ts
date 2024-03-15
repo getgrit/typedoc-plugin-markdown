@@ -1,9 +1,9 @@
-export let declarationMember: string;
+export const members = let declarationMember: string;
 
 export function signatureMember() {}
 
 class NotExportedClass {}
-export { NotExportedClass as ReferenceMember };
+export const members = ;
 
 export class ClassWithAccessorMembers {
   private _private: string;

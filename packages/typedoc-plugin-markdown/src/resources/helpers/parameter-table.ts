@@ -3,8 +3,7 @@ import { ParameterReflection, ReflectionKind, ReflectionType } from 'typedoc';
 import { stripLineBreaks } from '../../utils';
 import { getReflectionType } from './type';
 
-export default function () {
-  Handlebars.registerHelper(
+export function parameter_table() { Handlebars.registerHelper(
     'parameterTable',
 
     function (this: ParameterReflection[]) {
@@ -34,8 +33,7 @@ export default function () {
         this.reduce((acc: any, current: any) => parseParams(current, acc), []),
       );
     },
-  );
-}
+  ); }
 
 function table(parameters: any) {
   const showDefaults = hasDefaultValues(parameters);

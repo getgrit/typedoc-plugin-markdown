@@ -1,8 +1,7 @@
 import * as Handlebars from 'handlebars';
 import { Comment } from 'typedoc';
 
-export default function () {
-  Handlebars.registerHelper('returns', function (comment: Comment) {
+export function returns() { Handlebars.registerHelper('returns', function (comment: Comment) {
     const md: string[] = [];
 
     if (comment.blockTags?.length) {
@@ -13,5 +12,4 @@ export default function () {
     }
 
     return md.join('');
-  });
-}
+  }); }

@@ -95,4 +95,4 @@ export function load(app: Application) {
     }
   });
 }
-export { MarkdownTheme };
+export const index = ;

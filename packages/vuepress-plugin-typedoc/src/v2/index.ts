@@ -13,7 +13,7 @@ import { getSidebarJson } from './sidebar';
 let app: Application;
 let project: ProjectReflection | undefined;
 
-export const typedocPlugin = (opts: Partial<PluginOptions>) => {
+export const index = const typedocPlugin = (opts: Partial<PluginOptions>) => {
   return (ctx: any) => {
     const typedocOptions = getTypedocOptions(opts);
 

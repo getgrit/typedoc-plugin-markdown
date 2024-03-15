@@ -1,8 +1,7 @@
 import * as Handlebars from 'handlebars';
 import { ReferenceReflection } from 'typedoc';
 
-export default function () {
-  Handlebars.registerHelper(
+export function reference_member() { Handlebars.registerHelper(
     'referenceMember',
     function (this: ReferenceReflection) {
       const referenced = this.tryGetTargetReflectionDeep();
@@ -21,5 +20,4 @@ export default function () {
         referenced.name
       }](${Handlebars.helpers.relativeURL(referenced.url)})`;
     },
-  );
-}
+  ); }

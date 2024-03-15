@@ -1,8 +1,7 @@
 import * as Handlebars from 'handlebars';
 import { SignatureReflection } from 'typedoc';
 
-export default function () {
-  Handlebars.registerHelper(
+export function index_signature_title() { Handlebars.registerHelper(
     'indexSignatureTitle',
     function (this: SignatureReflection) {
       const md = ['▪'];
@@ -20,5 +19,4 @@ export default function () {
       );
       return md.join(' ');
     },
-  );
-}
+  ); }
