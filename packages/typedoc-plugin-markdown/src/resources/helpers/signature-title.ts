@@ -7,8 +7,7 @@ import {
 import { memberSymbol } from '../../utils';
 import { MarkdownTheme } from '../../theme';
 
-export default function (theme: MarkdownTheme) {
-  Handlebars.registerHelper(
+export function signature_title(theme: MarkdownTheme) { Handlebars.registerHelper(
     'signatureTitle',
     function (this: SignatureReflection, accessor?: string, standalone = true) {
       const md: string[] = [];
@@ -41,8 +40,7 @@ export default function (theme: MarkdownTheme) {
       }
       return md.join('') + (standalone ? '\n' : '');
     },
-  );
-}
+  ); }
 
 const getParameters = (
   parameters: ParameterReflection[] = [],

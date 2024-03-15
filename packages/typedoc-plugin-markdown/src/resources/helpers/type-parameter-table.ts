@@ -2,14 +2,12 @@ import * as Handlebars from 'handlebars';
 import { TypeParameterReflection } from 'typedoc';
 import { stripLineBreaks } from '../../utils';
 
-export default function () {
-  Handlebars.registerHelper(
+export function type_parameter_table() { Handlebars.registerHelper(
     'typeParameterTable',
     function (this: TypeParameterReflection[]) {
       return table(this);
     },
-  );
-}
+  ); }
 
 function table(parameters: any) {
   const showTypeCol = hasTypes(parameters);

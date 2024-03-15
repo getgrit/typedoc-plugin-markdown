@@ -2,8 +2,7 @@ import * as Handlebars from 'handlebars';
 import { ContainerReflection, ReflectionKind } from 'typedoc';
 import { PageEvent } from 'typedoc/dist/lib/output/events';
 
-export default function () {
-  Handlebars.registerHelper(
+export function reflection_path() { Handlebars.registerHelper(
     'reflectionPath',
 
     function (this: PageEvent<ContainerReflection>) {
@@ -32,5 +31,4 @@ export default function () {
       }
       return null;
     },
-  );
-}
+  ); }

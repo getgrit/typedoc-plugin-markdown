@@ -1,6 +1,6 @@
 import { SidebarOptions } from '../shared/types';
 
-export const getSidebarJson = (
+export const sidebar = const getSidebarJson = (
   navigation: any,
   sidebarOptions: SidebarOptions,
   outDir: string,

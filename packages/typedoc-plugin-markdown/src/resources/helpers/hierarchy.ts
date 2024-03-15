@@ -2,8 +2,7 @@ import * as Handlebars from 'handlebars';
 import { DeclarationHierarchy } from 'typedoc/dist/lib/models';
 import { spaces } from '../../utils';
 
-export default function () {
-  Handlebars.registerHelper(
+export function hierarchy() { Handlebars.registerHelper(
     'hierarchy',
     function (this: DeclarationHierarchy, level: number) {
       const md: string[] = [];
@@ -24,5 +23,4 @@ export default function () {
 
   function getSymbol(level: number) {
     return spaces(2) + [...Array(level)].map(() => '↳').join('');
-  }
-}
+  } }

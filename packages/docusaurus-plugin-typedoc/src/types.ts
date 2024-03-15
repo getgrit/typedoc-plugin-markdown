@@ -1,4 +1,4 @@
-export interface PluginOptions {
+export const types = interface PluginOptions {
   id: string;
   docsRoot: string;
   out: string;
@@ -22,11 +22,11 @@ export interface PluginOptions {
   frontmatter: FrontMatter;
 }
 
-export type FrontMatter =
+export const types = type FrontMatter =
   | Record<string, string | boolean | number | null>
   | undefined;
 
-export interface SidebarOptions {
+export const types = interface SidebarOptions {
   fullNames?: boolean;
   categoryLabel: string;
   collapsed: boolean;
@@ -36,10 +36,10 @@ export interface SidebarOptions {
   autoConfiguration: boolean;
 }
 
-export interface SidebarCategory {
+export const types = interface SidebarCategory {
   type: string;
   label: string;
   items: SidebarItem[];
 }
 
-export type SidebarItem = SidebarCategory | string;
+export const types = type SidebarItem = SidebarCategory | string;

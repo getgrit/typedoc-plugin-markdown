@@ -3,8 +3,7 @@ import { SignatureReflection } from 'typedoc';
 import { ArrayType, ReferenceType } from 'typedoc/dist/lib/models/types';
 import { escapeChars } from '../../utils';
 
-export default function () {
-  Handlebars.registerHelper(
+export function type_and_parent() { Handlebars.registerHelper(
     'typeAndParent',
     function (this: ArrayType | ReferenceType) {
       const getUrl = (name: string, url: string) =>
@@ -53,5 +52,4 @@ export default function () {
       }
       return 'void';
     },
-  );
-}
+  ); }

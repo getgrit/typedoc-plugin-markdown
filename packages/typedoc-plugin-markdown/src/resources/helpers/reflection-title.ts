@@ -3,8 +3,7 @@ import { PageEvent, ParameterReflection, ReflectionKind } from 'typedoc';
 import { MarkdownTheme } from '../../theme';
 import { escapeChars, getDisplayName } from '../../utils';
 
-export default function (theme: MarkdownTheme) {
-  Handlebars.registerHelper(
+export function reflection_title(theme: MarkdownTheme) { Handlebars.registerHelper(
     'reflectionTitle',
     function (this: PageEvent<any>, shouldEscape = true) {
       const title: string[] = [''];
@@ -26,5 +25,4 @@ export default function (theme: MarkdownTheme) {
       }
       return title.join('');
     },
-  );
-}
+  ); }

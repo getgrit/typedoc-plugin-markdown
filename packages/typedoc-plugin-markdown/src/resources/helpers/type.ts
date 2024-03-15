@@ -22,8 +22,7 @@ import { escapeChars } from '../../utils';
 
 type Collapse = 'object' | 'function' | 'all' | 'none';
 
-export default function () {
-  Handlebars.registerHelper(
+export function type() { Handlebars.registerHelper(
     'type',
     function (
       this:
@@ -107,8 +106,7 @@ export default function () {
 
       return this ? escapeChars(this.toString()) : '';
     },
-  );
-}
+  ); }
 
 function getLiteralType(model: LiteralType) {
   if (typeof model.value === 'bigint') {

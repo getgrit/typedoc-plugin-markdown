@@ -1,10 +1,10 @@
-export const stringConstWithDefaultValue = 'hello';
-export let stringLetWithDefaultValue = 'hello';
+export const declarations = const stringConstWithDefaultValue = 'hello';
+export const declarations = let stringLetWithDefaultValue = 'hello';
 stringLetWithDefaultValue = 'world';
 
-export let undefinedNumberDeclaration: number;
+export const declarations = let undefinedNumberDeclaration: number;
 
-export const objectLiteralDeclaration = {
+export const declarations = const objectLiteralDeclaration = {
   /**
    * Comment for valueZ
    */
@@ -45,7 +45,7 @@ export const objectLiteralDeclaration = {
   valueD: 'ko',
 };
 
-export let typeLiteralDeclaration: {
+export const declarations = let typeLiteralDeclaration: {
   /**
    * Comment for valueZ
    */
@@ -85,15 +85,15 @@ export let typeLiteralDeclaration: {
   valueD: unknown;
 };
 
-export let functionDeclaration: (someArg: number) => boolean;
+export const declarations = let functionDeclaration: (someArg: number) => boolean;
 
-export let callableDeclaration: {
+export const declarations = let callableDeclaration: {
   (someArg: number): boolean;
   arg1: string;
   arg2: number;
 };
 
-export let indexableDeclaration: {
+export const declarations = let indexableDeclaration: {
   [index: number]: string;
   arg1: string;
 };
@@ -104,31 +104,31 @@ export let indexableDeclaration: {
  * @param {string} objectLiteralAsConstDeclaration.Prop1 - Comment for Prop1.
  * @param {string} objectLiteralAsConstDeclaration.Prop2 - Comment for Prop2.
  */
-export const objectLiteralAsConstDeclaration = {
+export const declarations = const objectLiteralAsConstDeclaration = {
   Prop1: 'Prop1',
   Prop2: 'Prop2',
   Prop3: 'Prop3',
 } as const;
 
-export const __DOUBLE_UNDERSCORES_DECLARATION__ = Symbol.for('__type__');
+export const declarations = const __DOUBLE_UNDERSCORES_DECLARATION__ = Symbol.for('__type__');
 
-export type AnyFunctionType<A = any> = (...input: any[]) => A;
+export const declarations = type AnyFunctionType<A = any> = (...input: any[]) => A;
 
-export enum EnumDeclarations {
+export const declarations = enum EnumDeclarations {
   Up,
   Down,
   Left,
   Right,
-}
+};
 
-export enum EnumDeclarationsWithDefaults {
+export const declarations = enum EnumDeclarationsWithDefaults {
   North = 'North',
   South = 'South',
   East = 'East',
   West = 'West',
-}
+};
 
-export let getterAndSetter: {
+export const declarations = let getterAndSetter: {
   get getMe(): Promise<string>;
   set setMe(x: string);
 };

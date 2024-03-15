@@ -8,14 +8,14 @@ export class ClassWithTypeParams<T, V> {
   propV: V;
 }
 
-export const functionWithTypeParam = <A>() => true;
+export const generics = const functionWithTypeParam = <A>() => true;
 
 /**
  *
  * @typeParam A Comment for type `A`
  * @typeParam B Comment for type `B`
  */
-export const functionWithTypeParams = <
+export const generics = const functionWithTypeParams = <
   A extends ClassWithTypeParams<string, number>,
   B = boolean | string,
   C = string,
@@ -32,8 +32,8 @@ export function functionWithGenericConstraints<Type, Key extends keyof Type>(
   return obj[key];
 }
 
-export type Generic1<T> = Generic2<Generic3<T>>;
-export type Generic2<T> = T;
-export type Generic3<T> = T;
+export const generics = type Generic1<T> = Generic2<Generic3<T>>;
+export const generics = type Generic2<T> = T;
+export const generics = type Generic3<T> = T;
 
-export type nestedGenerics = Generic1<Generic2<Generic3<string>>>;
+export const generics = type nestedGenerics = Generic1<Generic2<Generic3<string>>>;

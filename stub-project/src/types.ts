@@ -1,33 +1,33 @@
 import { ClassWithTypeParams } from './generics';
 import { _someCallback_ } from './signatures';
 
-export let htmlElement: HTMLElement;
+export const types = let htmlElement: HTMLElement;
 
-export let externalReference: HTMLElement;
+export const types = let externalReference: HTMLElement;
 
-export const externalReferenceInsideTypeParams = new ClassWithTypeParams<
+export const types = const externalReferenceInsideTypeParams = new ClassWithTypeParams<
   HTMLElement,
   Error
 >();
 
-export let stringType: string;
+export const types = let stringType: string;
 
-export const stringLiteralType = 'blue';
+export const types = const stringLiteralType = 'blue';
 
-export type unionType = 'ease-in' | 'ease-out';
+export const types = type unionType = 'ease-in' | 'ease-out';
 
-export type unionTypeWithSymbols =
+export const types = type unionTypeWithSymbols =
   | ' '
   | 'string'
   | 'strong|with|pipes'
   | 'type`with`backticks'
   | '*';
 
-export type unionTypeWithSymbolsDeclarations = {
+export const types = type unionTypeWithSymbolsDeclarations = {
   bar: ' ' | 'string' | 'strong|with|pipes' | 'type`with`backticks' | '*';
 };
 
-export let literalType: {
+export const types = let literalType: {
   valueZ: string;
   valueY: { (): string };
   valueX: {
@@ -39,7 +39,7 @@ export let literalType: {
   valueB?: boolean;
 };
 
-export const objectLiteralType = {
+export const types = const objectLiteralType = {
   '<': '<foo>',
   '<foo>': 'foo',
   '\\n': 'foo',
@@ -68,14 +68,14 @@ export const objectLiteralType = {
   valueB: true,
 };
 
-export let tupleType: [string, number];
+export const types = let tupleType: [string, number];
 
 export class IntersectionClassA {}
 export class IntersectionClassB {}
 
-export type intersectionType = IntersectionClassA & IntersectionClassB;
+export const types = type intersectionType = IntersectionClassA & IntersectionClassB;
 
-export const arrayType: string[] = ['Apple', 'Orange', 'Banana'];
+export const types = const arrayType: string[] = ['Apple', 'Orange', 'Banana'];
 
 export function restUnionTypes(
   arg: boolean[] | number,
@@ -88,21 +88,21 @@ export function generic<T>(arg: T): T {
   return arg;
 }
 
-export const functionReflectionType: <T>(arg: T) => T = generic;
+export const types = const functionReflectionType: <T>(arg: T) => T = generic;
 
-export const typeOperatorType: unique symbol = Symbol.for('__type__');
+export const types = const typeOperatorType: unique symbol = Symbol.for('__type__');
 
-export type objectLiteralUnionType = string | { z: string };
+export const types = type objectLiteralUnionType = string | { z: string };
 
-export type PartialMappedType<T> = {
+export const types = type PartialMappedType<T> = {
   [P in keyof T]?: T[P];
 };
 
-export type ReadonlyMapedType<T> = {
+export const types = type ReadonlyMapedType<T> = {
   readonly [P in keyof T]: T[P];
 };
 
-export type ConditionalType<T> = T extends string
+export const types = type ConditionalType<T> = T extends string
   ? 'string'
   : T extends number
   ? 'number'
@@ -112,8 +112,8 @@ export type ConditionalType<T> = T extends string
   ? 'undefined'
   : 'object';
 
-export type Bar<T, R> = (foos: ConditionalType<T>[]) => R; // defined elsewhere
-export const baz: Bar<string, string> = (foos) => '...';
+export const types = type Bar<T, R> = (foos: ConditionalType<T>[]) => R; // defined elsewhere
+export const types = const baz: Bar<string, string> = (foos) => '...';
 
-export const fooBigInt = BigInt(100); // the BigInt function
-export const barBigInt = 100n; // a BigInt literal
+export const types = const fooBigInt = BigInt(100); // the BigInt function
+export const types = const barBigInt = 100n; // a BigInt literal

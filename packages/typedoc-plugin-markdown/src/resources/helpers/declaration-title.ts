@@ -14,8 +14,7 @@ import {
   stripLineBreaks,
 } from '../../utils';
 
-export default function (theme: MarkdownTheme) {
-  Handlebars.registerHelper(
+export function declaration_title(theme: MarkdownTheme) { Handlebars.registerHelper(
     'declarationTitle',
     function (this: ParameterReflection | DeclarationReflection) {
       const md = theme.hideMembersSymbol ? [] : [memberSymbol(this)];
@@ -61,5 +60,4 @@ export default function (theme: MarkdownTheme) {
       }
       return md.join('');
     },
-  );
-}
+  ); }

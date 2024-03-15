@@ -1,12 +1,12 @@
 /**
  * @category CategoryA
  */
-export const categoryVariableA1 = true;
+export const categories = const categoryVariableA1 = true;
 
 /**
  * @category CategoryA
  */
-export const categoryVariableA2 = true;
+export const categories = const categoryVariableA2 = true;
 
 /**
  * @category CategoryA
@@ -32,21 +32,21 @@ export function categoryFunctionA3() {
 /**
  * @category CategoryA
  */
-export interface CategoryInterfaceA1 {
+export const categories = interface CategoryInterfaceA1 {
   value: string;
-}
+};
 
 /**
  * @category CategoryA
  */
-export interface CategoryInterfaceA2 {
+export const categories = interface CategoryInterfaceA2 {
   value: string;
-}
+};
 
 /**
  * @category CategoryB
  */
-export const categoryVariableB1 = true;
+export const categories = const categoryVariableB1 = true;
 
 /**
  * @category CategoryB
@@ -55,18 +55,18 @@ export function categoryFunctionB2() {
   return true;
 }
 
-export const otherVariableA = true;
+export const categories = const otherVariableA = true;
 
 export function otherFunctionA() {
   return true;
 }
 
-export const otherVariableB = true;
+export const categories = const otherVariableB = true;
 
 export function otherFunctionB() {
   return true;
 }
 
-export interface OtherInterfaceA {
+export const categories = interface OtherInterfaceA {
   value: string;
-}
+};

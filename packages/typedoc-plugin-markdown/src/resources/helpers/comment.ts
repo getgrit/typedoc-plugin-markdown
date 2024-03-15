@@ -4,8 +4,7 @@ import * as Path from 'path';
 import { CommentDisplayPart } from 'typedoc/dist/lib/models/comments/comment';
 import { MarkdownTheme } from '../../theme';
 
-export default function (theme: MarkdownTheme) {
-  Handlebars.registerHelper('comment', function (parts: CommentDisplayPart[]) {
+export function comment(theme: MarkdownTheme) { Handlebars.registerHelper('comment', function (parts: CommentDisplayPart[]) {
     const result: string[] = [];
     for (const part of parts) {
       switch (part.kind) {
@@ -46,8 +45,7 @@ export default function (theme: MarkdownTheme) {
     }
 
     return parseMarkdown(result.join(''), theme);
-  });
-}
+  }); }
 
 function parseMarkdown(text: string, theme: MarkdownTheme) {
   const includePattern = /\[\[include:([^\]]+?)\]\]/g;

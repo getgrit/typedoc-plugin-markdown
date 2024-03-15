@@ -3,8 +3,7 @@ import { DeclarationReflection, ReflectionType } from 'typedoc';
 import { MarkdownTheme } from '../../theme';
 import { escapeChars, stripLineBreaks } from '../../utils';
 
-export default function (theme: MarkdownTheme) {
-  Handlebars.registerHelper(
+export function type_declaration_object_literal(theme: MarkdownTheme) { Handlebars.registerHelper(
     'typeDeclarationMembers',
     function (this: DeclarationReflection[]) {
       const comments = this.map(
@@ -51,8 +50,7 @@ export default function (theme: MarkdownTheme) {
       }
       return result;
     },
-  );
-}
+  ); }
 
 function getListMarkdownContent(properties: DeclarationReflection[]) {
   const propertyTable = getTableMarkdownContentWithoutComment(properties);

@@ -3,8 +3,7 @@ import { PageEvent } from 'typedoc';
 import { MarkdownTheme } from '../../theme';
 import { escapeChars, getDisplayName } from '../../utils';
 
-export default function (theme: MarkdownTheme) {
-  Handlebars.registerHelper('breadcrumbs', function (this: PageEvent) {
+export function breadcrumbs(theme: MarkdownTheme) { Handlebars.registerHelper('breadcrumbs', function (this: PageEvent) {
     const { entryPoints, entryDocument, project, readme } = theme;
 
     if (!project) {
@@ -30,8 +29,7 @@ export default function (theme: MarkdownTheme) {
     }
     const breadcrumbsOut = breadcrumb(this, this.model, breadcrumbs);
     return breadcrumbsOut;
-  });
-}
+  }); }
 
 function breadcrumb(page: PageEvent, model: any, md: string[]) {
   if (model && model.parent) {

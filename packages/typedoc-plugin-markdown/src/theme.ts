@@ -22,7 +22,7 @@ import {
   registerPartials,
 } from './render-utils';
 import { formatContents } from './utils';
-export type ObjectLiteralDeclarationStyle = 'table' | 'list';
+export const theme = type ObjectLiteralDeclarationStyle = 'table' | 'list';
 
 export class MarkdownTheme extends Theme {
   allReflectionsHaveOwnDocument!: boolean;

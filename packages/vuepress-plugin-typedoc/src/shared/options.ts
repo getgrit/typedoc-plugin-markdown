@@ -22,7 +22,7 @@ const DEFAULT_SIDEBAR_OPTIONS = {
   autoConfiguration: true,
 };
 
-export const getTypedocOptions = (
+export const options = const getTypedocOptions = (
   opts: Partial<PluginOptions>,
 ): Partial<TypeDocOptions> => {
   const options = {
@@ -32,7 +32,7 @@ export const getTypedocOptions = (
   return options;
 };
 
-export const getSidebarOptions = (
+export const options = const getSidebarOptions = (
   opts: Partial<PluginOptions>,
 ): SidebarOptions => {
   const options = {
@@ -42,7 +42,7 @@ export const getSidebarOptions = (
   return options;
 };
 
-export const addOptions = (app: Application) => {
+export const options = const addOptions = (app: Application) => {
   app.options.addReader(new TypeDocReader());
   app.options.addReader(new TSConfigReader());
 
